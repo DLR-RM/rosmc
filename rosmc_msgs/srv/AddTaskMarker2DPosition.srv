@@ -1,0 +1,4 @@
+geometry_msgs/Point position
+rosmc_msgs/MarkerStatus status
+---
+string name

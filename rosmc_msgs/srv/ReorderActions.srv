@@ -1,0 +1,8 @@
+# Example
+# original order of actions = [A, B, C, D, E]
+# updated order of actions  = [B, C, A, D, E]
+# then new_order = [1, 2, 0, 3, 4]
+string agent_name
+uint16[] new_order
+---
+string error_msg

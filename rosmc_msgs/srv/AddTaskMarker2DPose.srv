@@ -1,0 +1,5 @@
+geometry_msgs/Point position
+float32 angle_deg
+rosmc_msgs/MarkerStatus status
+---
+string name

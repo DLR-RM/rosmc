@@ -1,0 +1,5 @@
+string agent_name
+rosmc_interface_msgs/ActionContent action_content
+---
+string action_id
+string error_msg

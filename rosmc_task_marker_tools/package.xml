@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>rosmc_task_marker_tools</name>
+  <version>2.1.6</version>
+  <description>Rviz plugins related to task markers</description>
+  <author>Ryo Sakagami</author>
+  <maintainer email="Ryo.Sakagami@dlr.de">Ryo Sakagami</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rosmc_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rviz</build_depend>
+  <build_depend>tf</build_depend>
+
+  <run_depend>rosmc_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>tf</run_depend>
+
+  <export>
+    <rviz plugin="${prefix}/plugin_description.xml"/>
+  </export>
+</package>

@@ -1,0 +1,4 @@
+# Service for map_simulator
+string rock_name
+---
+float32 rock_value

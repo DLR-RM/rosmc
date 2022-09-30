@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <name>rosmc_mission_server</name>
+  <version>2.1.6</version>
+  <description>The rosmc_mission_server package</description>
+
+  <maintainer email="Ryo.Sakagami@dlr.de">Ryo Sakagami</maintainer>
+
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rosmc_msgs</build_depend>
+  <build_depend>rosmc_interface_msgs</build_depend>
+  <build_depend>interactive_markers</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>rospy</build_depend>
+
+  <run_depend>rosmc_msgs</run_depend>
+  <run_depend>rosmc_interface_msgs</run_depend>
+  <run_depend>interactive_markers</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>rospy</run_depend>
+
+  <export>
+  </export>
+
+</package>

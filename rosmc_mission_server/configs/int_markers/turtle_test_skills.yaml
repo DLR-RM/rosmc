@@ -1,0 +1,91 @@
+# Following variables are available:
+# INT_MARKER: visualization_msgs.msg.InteractiveMarker()
+# ROLL: calculated roll angle in radian
+# PITCH: calculated pitch angle in radian
+# YAW: calculated yaw angle in radian
+
+# TODO: It might be better if we specify break_down mode or build_up mode in here as well.
+#  Currently, we take implicit option to judge those modes by existence of key 'members' or 'value', which is not nice
+
+explore:
+  - name: pos
+    type: TASK
+    topics:
+      - interactive_markers_2d_position
+    members:
+      - name: x_pos
+        value: INT_MARKER.pose.position.x
+      - name: y_pos
+        value: INT_MARKER.pose.position.y
+    service_type_for_addition: AddTaskMarker
+    service_topic_for_addition: interactive_markers_2d_position
+    service_req_attr: pose
+    service_req_value: INT_MARKER.pose
+
+# Assign TASK int_marker to 'group' whose mode is 'break_down'
+mapping:
+  - name: list_pose  # name of 'group' or 'member'
+    type: TASK_LIST_POSEDICT
+    topics:
+      # NOTE: DO NOT HAVE DIFFERENT TOPICS WITH DIFFERENT TYPES DEFINED IN COMMON.YAML
+      - interactive_markers_2d_area
+    # Service values are hard coded depending on the type of 'break_down' defined in parameter_group config
+    service_type_for_addition: AddTaskMarkerArea
+    service_topic_for_addition: interactive_markers_2d_area
+
+# Assign TASK int_marker to 'group' whose mode is 'build_up'
+move_to_pose:
+  - name: pose
+    type: TASK
+    topics:
+      - interactive_markers_2d_pose
+    members:  # this element is required iif name is from 'group' whose mode is 'build_up'
+      - name: x_pos
+        value: INT_MARKER.pose.position.x
+      - name: y_pos
+        value: INT_MARKER.pose.position.y
+      - name: yaw
+        value: YAW
+    # Following elements are required iif type == TASK and mode is not 'break_down'
+    service_type_for_addition: AddTaskMarker
+    service_topic_for_addition: interactive_markers_2d_pose  # This must be one of 'topics'
+    service_req_attr: pose
+    service_req_value: INT_MARKER.pose
+
+move_to_position:
+  - name: pos
+    type: TASK
+    topics:
+      - interactive_markers_2d_position
+    members:
+      - name: x_pos
+        value: INT_MARKER.pose.position.x
+      - name: y_pos
+        value: INT_MARKER.pose.position.y
+    service_type_for_addition: AddTaskMarker
+    service_topic_for_addition: interactive_markers_2d_position
+    service_req_attr: pose
+    service_req_value: INT_MARKER.pose
+
+move_to_position_backward:
+  - name: pos
+    type: TASK
+    topics:
+      - interactive_markers_2d_position
+    members:
+      - name: x_pos
+        value: INT_MARKER.pose.position.x
+      - name: y_pos
+        value: INT_MARKER.pose.position.y
+    service_type_for_addition: AddTaskMarker
+    service_topic_for_addition: interactive_markers_2d_position
+    service_req_attr: pose
+    service_req_value: INT_MARKER.pose
+
+# Assign AGENT int_marker to 'member'
+follow_turtle:
+  - name: turtle_to_follow
+    type: AGENT
+    topics:
+      - interactive_markers_agents
+    value: INT_MARKER.name

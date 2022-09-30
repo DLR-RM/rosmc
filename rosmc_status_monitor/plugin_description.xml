@@ -1,0 +1,9 @@
+<library path="lib/librosmc_status_monitor">
+  <class name="rosmc_status_monitor/CameraPosePublisherPanel"
+         type="rosmc_status_monitor::CameraPosePublisherPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      Panel for publishing camera pose in OGRE scene.
+    </description>
+  </class>
+</library>

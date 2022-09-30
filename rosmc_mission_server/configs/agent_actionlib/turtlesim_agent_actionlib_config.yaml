@@ -1,0 +1,6 @@
+turtle1: 
+  skill_root_dir: $ROSMC_TURTLESIM_STATEMACHINES/mission_control_interface_turtles/turtle_test_skills
+  name: turtle_test_skills
+turtle2: 
+  skill_root_dir: $ROSMC_TURTLESIM_STATEMACHINES/mission_control_interface_turtles/turtle_test_skills
+  name: turtle_test_skills

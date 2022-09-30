@@ -1,0 +1,10 @@
+<launch>
+  <rosparam param="agent_actionlib_config_path" ns="mission_control" subst_value="True">$(find rosmc_mission_server)/configs/agent_actionlib/turtlesim_agent_actionlib_config.yaml</rosparam>
+  <rosparam param="use_interactive_markers" ns="mission_control">true</rosparam>
+  <rosparam param="parameter_group_config_folder" ns="mission_control" subst_value="True">$(find rosmc_mission_server)/configs/parameter_group</rosparam>
+  <rosparam param="int_marker_config_folder" ns="mission_control" subst_value="True">$(find rosmc_mission_server)/configs/int_markers</rosparam>
+  <rosparam param="frame_id" ns="mission_control">map</rosparam>
+  <node pkg="rosmc_mission_server" type="mission_server.py"
+        name="mission_server" output="screen" ns="mission_control">
+  </node>
+</launch>

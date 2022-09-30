@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package>
+  <name>rosmc_agents</name>
+  <version>2.1.6</version>
+  <description>The rosmc_agents package</description>
+
+  <maintainer email="Ryo.Sakagami@dlr.de">Ryo Sakagami</maintainer>
+
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rosmc_msgs</build_depend>
+  <build_depend>rosmc_interface_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>interactive_markers</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>turtlesim</build_depend>
+
+  <run_depend>rosmc_msgs</run_depend>
+  <run_depend>rosmc_interface_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>interactive_markers</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>turtlesim</run_depend>
+
+  <export>
+  </export>
+
+</package>

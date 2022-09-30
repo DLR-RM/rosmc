@@ -1,0 +1,17 @@
+# List all int_marker topics you want to use.
+# No duplication allowed
+# name: the name of the interactive marker publisher node
+# type: {AGENT, TASK, TASK_POSEDICT, TASK_LIST_POSEDICT, TASK_OBJECT}
+#   - AGENT: a marker for a pre-existing agent (such as robots or pre-known objects to be handled)
+#   - TASK: a marker for non-existing objects (such as POIs and ROIs)
+#   - TASK_POSEDICT: a marker for a POI. Used for a specific input parameter format "pose" = {x: 1.2; y: 8.3, z: 4.2, roll: 3.1415, pitch: 0, yaw: 1.13}
+#   - TASK_LIST_POSEDICT: a marker for POIs or a ROI. Used for a specific input parameter format ["pose1", "pose2", ...].
+topics:
+  - name: interactive_markers_agents
+    type: AGENT
+  - name: interactive_markers_2d_position
+    type: TASK
+  - name: interactive_markers_2d_pose
+    type: TASK
+  - name: interactive_markers_2d_area
+    type: TASK_LIST_POSEDICT

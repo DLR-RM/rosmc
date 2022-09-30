@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="rosmc_status_monitor" type="status_icons_publisher.py"
+        name="status_icon_publisher"/>
+</launch>

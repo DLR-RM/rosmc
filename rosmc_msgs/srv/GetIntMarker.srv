@@ -1,0 +1,3 @@
+string marker_name
+---
+visualization_msgs/InteractiveMarker int_marker

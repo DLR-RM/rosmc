@@ -1,0 +1,12 @@
+<launch>
+  <rosparam command="load" ns="mission_control" file="$(find rosmc_task_marker_server)/configs/task_marker_params.yaml"/>
+  <node pkg="rosmc_task_marker_server" type="task_marker_2d_position_server_node.py"
+        name="task_marker_2d_position_server" ns="mission_control"/>
+
+  <node pkg="rosmc_task_marker_server" type="task_marker_2d_pose_server_node.py"
+        name="task_marker_2d_pose_server" ns="mission_control"/>
+
+  <node pkg="rosmc_task_marker_server" type="task_marker_2d_area_server_node.py"
+        name="task_marker_2d_area_server" ns="mission_control"/>
+
+</launch>

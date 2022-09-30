@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="rosmc_agents" type="turtle_tf_broadcaster.py" name="turtle2">
+    <param name="rate" value="10.0"/>
+    <param name="z" value="0.4"/>
+  </node>
+</launch>

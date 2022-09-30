@@ -1,0 +1,3 @@
+string marker_name
+rosmc_msgs/MarkerStatus updated_status
+---

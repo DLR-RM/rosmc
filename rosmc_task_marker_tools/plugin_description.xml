@@ -1,0 +1,23 @@
+<library path="lib/librosmc_task_marker_tools">
+  <class name="rosmc_task_marker_tools/AddTaskMarker2dPositionTool"
+         type="rosmc_task_marker_tools::AddTaskMarker2dPositionTool"
+         base_class_type="rviz::Tool">
+    <description>
+      Tool for adding a task marker that has 2D position information.
+    </description>
+  </class>
+  <class name="rosmc_task_marker_tools/AddTaskMarker2dPoseTool"
+         type="rosmc_task_marker_tools::AddTaskMarker2dPoseTool"
+         base_class_type="rviz::Tool">
+    <description>
+      Tool for adding a task marker that has 2D pose information.
+    </description>
+  </class>
+  <class name="rosmc_task_marker_tools/AddTaskMarker2dAreaTool"
+         type="rosmc_task_marker_tools::AddTaskMarker2dAreaTool"
+         base_class_type="rviz::Tool">
+    <description>
+      Tool for adding a task marker that has 2D area information.
+    </description>
+  </class>
+</library>

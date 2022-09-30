@@ -1,0 +1,6 @@
+geometry_msgs/Point position
+float32 x_scale
+float32 y_scale
+rosmc_msgs/MarkerStatus status
+---
+string name

@@ -1,0 +1,16 @@
+<library path="src">
+  <class name="ROSMC Command GUI" type="rosmc_command_gui.mission_control.MissionControlPlugin" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      ROSMC Command GUI.
+    </description>
+    <qtgui>
+      <group>
+        <label>ROSMC</label>
+        <icon type="theme">folder</icon>
+      </group>
+      <label>Command GUI</label>
+      <icon type="theme">system-help</icon>
+      <statustip>Graphical user interface for composing and monitoring a mission.</statustip>
+    </qtgui>
+  </class>
+</library>

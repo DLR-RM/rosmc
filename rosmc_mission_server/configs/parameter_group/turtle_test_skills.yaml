@@ -1,0 +1,59 @@
+explore:
+  - mode: build_up  # build_up mode: summarize input parameters into group
+    group: pos  # arbitrary name except for parameter names
+    members:
+      - x_pos  # this must be the same as the parameter used in Mission.srv
+      - y_pos
+  - mode: build_up
+    group: scale
+    members:
+      - x_scale
+      - y_scale
+
+mapping:
+  - mode: break_down  # break_down mode: expand input parameters into elements
+    group: list_pose  # this must be the same as the parameter used in Mission.srv
+    type: posedict  # only required if mode == break_down.
+
+# mode break_down:
+#   All types except for `dict` are currenly hard coded.
+#   This is because break_down mode will only be required for input parameter 'list'.
+#   We need 'type' info to know WHAT will be inside of the list.
+#   This 'type' info is also required for interactive marker assignments.
+# type
+#   - dict: non-nested dictionary
+#   - posedict: each element is dictionary with key 'x', 'y', 'z', 'roll', 'pitch', 'yaw'
+
+# TODO: Implement break_down mode for list of dictionary representing pose
+#       (such as [x, y, z, roll, pitch, yaw] or {x: 1.2; y: 8.3, z: 4.2, roll: 3.1415, pitch: 0, yaw: 1.13})
+# TODO: rename type 'dict' for break_down to `POSEDICT`?
+# TODO: rename type 'posedict' for break_down to 'LIST_POSEDICT'?
+
+move_to_pose:
+  - mode: build_up
+    group: pose
+    members:
+      - x_pos
+      - y_pos
+      - yaw
+
+move_to_position:
+  - mode: build_up
+    group: pos
+    members:
+      - x_pos
+      - y_pos
+
+move_to_position_backward:
+  - mode: build_up
+    group: pos
+    members:
+      - x_pos
+      - y_pos
+
+take_measurements:
+  - mode: build_up
+    group: pos
+    members:
+      - x_pos
+      - y_pos

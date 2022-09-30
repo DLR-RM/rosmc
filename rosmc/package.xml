@@ -1,0 +1,27 @@
+<package>
+  <name>rosmc</name>
+  <version>2.1.6</version>
+  <description>
+  Metapackage for ROS Mission Control (ROSMC).
+  </description>
+  <maintainer email="Ryo.Sakagami@dlr.de">Ryo Sakagami</maintainer>
+  <license>BSD 3-Clause</license>
+
+  <author email="Ryo.Sakagami@dlr.de">Ryo Sakagami</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>jsk_rviz_plugins</run_depend>
+  <run_depend>rosmc_3d_gui</run_depend>
+  <run_depend>rosmc_agents</run_depend>
+  <run_depend>rosmc_command_gui</run_depend>
+  <run_depend>rosmc_mission_server</run_depend>
+  <run_depend>rosmc_msgs</run_depend>
+  <run_depend>rosmc_interface_msgs</run_depend>
+  <run_depend>rosmc_task_marker_server</run_depend>
+  <run_depend>rosmc_task_marker_tools</run_depend>
+  <run_depend>rosmc_status_monitor</run_depend>
+  <export>
+      <metapackage/>
+  </export>
+</package>
